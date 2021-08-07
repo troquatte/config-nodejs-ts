@@ -1,13 +1,14 @@
-import { Router, Request, Response } from "express";
+import { Router } from "express";
+import { FirstController } from "./app/controller/FirstController";
 
 const routes: Router = Router()
- 
+
+//Controllers
+const firstController = new FirstController();
+
+
 //Routes
-routes.get("/", (req:Request, res:Response) => {
-  return res.json({
-    response: 'Hello World'
-  });
-});
+routes.get("/", firstController.home);
 
 
 export { routes };
