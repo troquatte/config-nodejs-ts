@@ -14,7 +14,7 @@ export class App{
     this.server.use(express.json());
   }
 
-  public router(){
+  private router(){
     this.server.use(router);
   }
 }
