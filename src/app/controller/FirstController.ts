@@ -9,3 +9,5 @@ export class FirstController{
   }
 
 }
+
+export const firstController = new FirstController();
